@@ -23,6 +23,7 @@ export const Search: FC<SearchType> = ({
         placeholder={placeholder}
         type={type}
         onChange={(e) => onChange(e.target.value)}
+        data-testid="input"
       />
     </div>
   );
