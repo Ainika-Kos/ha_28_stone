@@ -2,18 +2,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px;
 }
 
-.marketView__logo {
-    width: 100px;
-    height: 100px;
+.marketView__image-wrapper {
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px;
+}
+
+.marketView__logo {
+    width: 100%;
 }
 
 .marketView__heading {
     color: #d251da;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 .marketView__groups {
@@ -21,6 +29,24 @@
     justify-content: space-around;
     margin: 0;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) { 
+
+    .marketView__heading {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 450px) { 
+
+    .marketView__heading {
+        font-size: 14px;
+    }
+
+    .marketView__groups {
+        justify-content: center;
+    }
 }
 
 

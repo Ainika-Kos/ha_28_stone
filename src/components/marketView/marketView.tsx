@@ -4,13 +4,16 @@ import { InstrumentType } from '../../data/types';
 import { Search } from '../search/search';
 import { InstrumentGroup } from '../instrumentGroup/instrumentGroup';
 import './marketView.scss';
+import Loading from '../loading/loading';
 
 export const MarketView = () => {
 
   const [instruments, setInstruments] = useState<InstrumentType[]>([]);
   const [searchWord, setSearchWord] = useState('');
+  const [loading, setLoading] = useState(false);
    
   useEffect(() => {
+    setLoading(true);
     const interval = setInterval(() => getData(), 1000);
     return () => {
       clearInterval(interval);
@@ -37,6 +40,7 @@ export const MarketView = () => {
         });
 
         setInstruments(newResult);
+        setLoading(false);
       });
   };
 
@@ -86,8 +90,10 @@ export const MarketView = () => {
       <div className="row center-xs">
         <div className="col-xs-12">
           <div className="marketView__header">
-            <img className="marketView__logo" src="https://www.logo.wine/a/logo/Ethereum/Ethereum-Diamond-Logo.wine.svg" alt="" />
-            <h3 className="marketView__heading">Welcome to the Market view</h3>
+            <div className="marketView__image-wrapper">
+              <img className="marketView__logo" src="https://blockchain-roadmaps.com/roadmaps/eth.png" alt="" />
+            </div>
+            <p className="marketView__heading">Welcome to the Market view</p>
           </div>
         </div>
       </div>
@@ -96,28 +102,36 @@ export const MarketView = () => {
           <Search
             type="search"
             value={searchWord}
-            placeholder="Enter currency code"
+            placeholder="Enter currency single code or currency pair"
             onChange={(name: string) => setSearchWord(name)}
           />
         </div>
       </div>
-      <div className="row">
-        <div className="col-xs-12">
-          <div className="marketView__groups">
-            {groupedInstruments.map(({ name, image, currencies }) => {
-              return (
-                <div key={name}>
-                  <InstrumentGroup
-                    instrumentArray={currencies}
-                    currency={name}
-                    image={image}
-                  />
-                </div>
-              );
-            })}
+      {!loading? (
+        <div className="row">
+          <div className="col-xs-12">
+            <div className="marketView__groups">
+              {groupedInstruments.map(({ name, image, currencies }) => {
+                return (
+                  <div key={name}>
+                    <InstrumentGroup
+                      instrumentArray={currencies}
+                      currency={name}
+                      image={image}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="row center-xs">
+          <div className="col-xs-12">
+            <Loading />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

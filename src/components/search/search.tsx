@@ -16,7 +16,7 @@ export const Search: FC<SearchType> = ({
 }) => {
   return (
     <div className="search">
-      <h3>Search:</h3>
+      <h3 className="search__text">Search:</h3>
       <input
         className="search__input"
         value={value}

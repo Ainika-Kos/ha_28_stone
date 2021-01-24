@@ -6,6 +6,10 @@
     margin-bottom: 30px;
 }
 
+.search__text {
+  margin: 8px;
+}
+
 .search__input {
   width: 50%;
   margin: 10px 15px;
@@ -23,5 +27,30 @@
   &:focus {
     outline: none;
     box-shadow: 0 0 3pt 1pt #d251da;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .search {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+ }
+ .search__input {
+  width: 90%;
+
+  &::placeholder {
+    font-size: 12px;
+  }
+}
+}
+
+@media only screen and (max-width: 450px) {
+  
+ .search__input {
+  
+  &::placeholder {
+    font-size: 10px;
+    }
   }
 }

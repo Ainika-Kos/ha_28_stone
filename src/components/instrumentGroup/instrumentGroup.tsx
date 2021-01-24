@@ -16,6 +16,7 @@ export const InstrumentGroup: FC<InstrumentGroupType> =
       currency,
       image,
     }) => {
+
     
       return (
         <div className="instrumentGroup">
