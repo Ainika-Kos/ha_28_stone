@@ -85,7 +85,10 @@ export const MarketView = () => {
     <div className="container">
       <div className="row center-xs">
         <div className="col-xs-12">
-          <h3 className="marketView__heading">Welcome to the cryptocurrency App</h3>
+          <div className="marketView__header">
+            <img className="marketView__logo" src="https://www.logo.wine/a/logo/Ethereum/Ethereum-Diamond-Logo.wine.svg" alt="" />
+            <h3 className="marketView__heading">Welcome to the Market view</h3>
+          </div>
         </div>
       </div>
       <div className="row center-xs">
