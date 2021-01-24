@@ -1,0 +1,27 @@
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search__input {
+  width: 50%;
+  margin: 10px 15px;
+  border-radius: 36px;
+  border: 2px solid #d251da;
+  padding: 10px 20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  min-height: 40px;
+
+  &::placeholder {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 3pt 1pt #d251da;
+  }
+}

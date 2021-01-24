@@ -1,0 +1,58 @@
+$shadow: rgba(0, 0, 0, 0.5);
+
+.instrumentCard {
+    width: 210px;
+    margin: 10px;
+    padding: 5px;
+    background-color: #503f5e;
+    border-radius: 4px;
+    box-shadow: 0 0.1875rem 1.5rem $shadow;
+    cursor: pointer;
+    transform: translate3d 0.5s;
+
+    &:hover {
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.075);
+        transform: translate3d(0, -5px, 0);
+    }
+}
+
+.instrumentCard__currency {
+    text-align: center;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #231E39;
+    & p {
+        margin: 0;
+    }
+}
+
+.instrumentCard__deal-info {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.instrumentCard__side {
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+
+.instrumentCard__amount {
+    font-size: 10px;
+    font-weight: 700;
+    vertical-align: sub;
+    margin: 0 2px;
+}
+
+.instrumentCard__price {
+    font-size: 20px;
+    &.bid {
+        color: #00bfff;
+    }
+    &.offer {
+        color: #d251da;
+    }
+
+}

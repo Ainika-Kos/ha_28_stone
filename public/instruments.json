@@ -1,0 +1,135 @@
+[
+  {
+    "currencyPair": "BTC | USD",
+    "bidPrice": 9259.61,
+    "bidAmount": 28,
+    "offerPrice": 9285.75,
+    "offerAmount": 70
+  },
+  {
+    "currencyPair": "BTC | EUR",
+    "bidPrice": 8210.06,
+    "bidAmount": 20,
+    "offerPrice": 8218.75,
+    "offerAmount": 70
+  },
+  {
+    "currencyPair": "BTC | GBP",
+    "bidPrice": 7383.89,
+    "bidAmount": 10,
+    "offerPrice": 7395.55,
+    "offerAmount": 20
+  },
+  {
+    "currencyPair": "BTC | AUD",
+    "bidPrice": 13304.69,
+    "bidAmount": 80,
+    "offerPrice": 13328.75,
+    "offerAmount": 20
+  },
+  {
+    "currencyPair": "BTC | CHF",
+    "bidPrice": 8745.51,
+    "bidAmount": 30,
+    "offerPrice": 8785.75,
+    "offerAmount": 5
+  },
+  {
+    "currencyPair": "ETH | USD",
+    "bidPrice": 239.04,
+    "bidAmount": 90,
+    "offerPrice": 285.75,
+    "offerAmount": 40
+  },
+  {
+    "currencyPair": "ETH | EUR",
+    "bidPrice": 211.89,
+    "bidAmount": 5,
+    "offerPrice": 215.05,
+    "offerAmount": 65
+  },
+  {
+    "currencyPair": "ETH | GBP",
+    "bidPrice": 190.39,
+    "bidAmount": 50,
+    "offerPrice": 205.95,
+    "offerAmount": 10
+  },
+  {
+    "currencyPair": "ETH | CHF",
+    "bidPrice": 225.57,
+    "bidAmount": 10,
+    "offerPrice": 235.42,
+    "offerAmount": 30
+  },
+  {
+    "currencyPair": "XRP | USD",
+    "bidPrice": 0.18624,
+    "bidAmount": 35,
+    "offerPrice": 0.19045,
+    "offerAmount": 50
+  },
+  {
+    "currencyPair": "XRP | EUR",
+    "bidPrice": 0.16538,
+    "bidAmount": 15,
+    "offerPrice": 0.1759,
+    "offerAmount": 20
+  },
+  {
+    "currencyPair": "XRP | GBP",
+    "bidPrice": 0.1475,
+    "bidAmount": 5,
+    "offerPrice": 0.1575,
+    "offerAmount": 15
+  },
+  {
+    "currencyPair": "BCH | USD",
+    "bidPrice": 9259.61,
+    "bidAmount": 28,
+    "offerPrice": 9285.75,
+    "offerAmount": 70
+  },
+  {
+    "currencyPair": "BCH | EUR",
+    "bidPrice": 8210.06,
+    "bidAmount": 20,
+    "offerPrice": 8218.75,
+    "offerAmount": 70
+  },
+  {
+    "currencyPair": "BCH | GBP",
+    "bidPrice": 7383.89,
+    "bidAmount": 10,
+    "offerPrice": 7395.75,
+    "offerAmount": 70
+  },
+  {
+    "currencyPair": "BCH | AUD",
+    "bidPrice": 13304.69,
+    "bidAmount": 80,
+    "offerPrice": 13328.75,
+    "offerAmount": 20
+  },
+  {
+    "currencyPair": "LTC | USD",
+    "bidPrice": 57.16,
+    "bidAmount": 20,
+    "offerPrice": 59.29,
+    "offerAmount": 10
+  },
+  {
+    "currencyPair": "LTC | GBP",
+    "bidPrice": 43.78,
+    "bidAmount": 5,
+    "offerPrice": 48.12,
+    "offerAmount": 20
+  },
+  {
+    "currencyPair": "LTC | CAD",
+    "bidPrice": 77.01,
+    "bidAmount": 10,
+    "offerPrice": 82.45,
+    "offerAmount": 30
+  }
+]
