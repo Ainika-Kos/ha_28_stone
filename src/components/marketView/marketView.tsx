@@ -5,7 +5,7 @@ import { Search } from '../search/search';
 import { InstrumentGroup } from '../instrumentGroup/instrumentGroup';
 import './marketView.scss';
 import Loading from '../loading/loading';
-import logo from '../../assets/logo/logo.png';
+import logo from '../../assets/images/logo.png';
 
 export const MarketView = () => {
 
