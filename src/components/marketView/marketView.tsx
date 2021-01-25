@@ -47,8 +47,18 @@ export const MarketView = () => {
 
   const newInstruments = [...instruments];
 
+  const convertInput = (input: string): string => {
+    return input
+      .replace('bitcoin cash', 'bch')
+      .replace('bitcoin', 'btc')
+      .replace('ethereum', 'eth')
+      .replace('ripple', 'xrp')
+      .replace('litecoin', 'ltc');
+  };
+
   const filteredInstruments = newInstruments.filter(({ currencyPair }) => {
-    return currencyPair.toLowerCase().includes(searchWord.toLowerCase());
+    return currencyPair.toLowerCase()
+      .includes(convertInput(searchWord.toLowerCase()));
   });
 
   const btc = filteredInstruments.filter(({ currencyPair }) => currencyPair.includes('BTC |'));
@@ -103,7 +113,7 @@ export const MarketView = () => {
           <Search
             type="search"
             value={searchWord}
-            placeholder="Enter currency single code or currency pair"
+            placeholder="Enter currency single code / currency pair / currency name"
             onChange={(name: string) => setSearchWord(name)}
           />
         </div>
