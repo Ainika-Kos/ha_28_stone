@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { InstrumentType } from '../../data/types';
 import './InstrumentCard.scss';
 
@@ -10,7 +10,7 @@ export const InstrumentCard: FC<InstrumentType> = (
     offerPrice,
     offerAmount
   }) => {
-    
+  
   return (
     <div className="instrumentCard">
       <div className="instrumentCard__currency">
