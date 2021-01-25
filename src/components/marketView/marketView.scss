@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .marketView__header {
     display: flex;
     justify-content: center;
@@ -19,7 +21,7 @@
 }
 
 .marketView__heading {
-    color: #d251da;
+    color: $purpleTextColor;
     font-size: 24px;
     font-weight: 500;
 }

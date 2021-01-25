@@ -1,7 +1,9 @@
+@import "../../styles/variables";
+
 .instrumentGroup {
     width: 80%;
     min-width: 230px;
-    border: 2px solid white;
+    border: 2px solid $mainTextColor;
     border-radius: 8px;
     display: flex;
     flex-direction: column;

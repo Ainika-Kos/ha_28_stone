@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .search {
     display: flex;
     flex-direction: row;
@@ -14,10 +16,10 @@
   width: 50%;
   margin: 10px 15px;
   border-radius: 36px;
-  border: 2px solid #d251da;
+  border: 2px solid $purpleTextColor;
   padding: 10px 20px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  box-shadow: 0 8px 16px 0 $mainShadow;
+  background-color: $mainTextColor;
   min-height: 40px;
 
   &::placeholder {
@@ -26,7 +28,7 @@
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 3pt 1pt #d251da;
+    box-shadow: 0 0 3pt 1pt $purpleTextColor;
   }
 }
 
