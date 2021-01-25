@@ -24,6 +24,11 @@
 2. Created according to the technical and business requirements
 3. Responsive and user-friendly design
 
+<img src="./src/assets/images/full.png" alt="wireframe"/>
+
+<img src="./src/assets/images/responsive.png" alt="wireframe"/>
+
+
 ---
 
 ### Libraries used in this project:

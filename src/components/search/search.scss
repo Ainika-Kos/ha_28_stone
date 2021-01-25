@@ -50,9 +50,10 @@
 @media only screen and (max-width: 450px) {
   
  .search__input {
+   padding: 15px;
   
   &::placeholder {
-    font-size: 10px;
+    font-size: 8px;
     }
   }
 }

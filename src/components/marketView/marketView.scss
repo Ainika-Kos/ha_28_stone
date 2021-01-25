@@ -29,18 +29,31 @@
 .marketView__groups {
     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
     margin: 0;
     flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 1200px) { 
+
+    .marketView__groups {
+        justify-content: flex-start;
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 700px) { 
+
+    .marketView__groups {
+        justify-content: space-between;
+    }
 
     .marketView__heading {
         font-size: 22px;
     }
 }
 
-@media only screen and (max-width: 450px) { 
+@media only screen and (max-width: 600px) { 
 
     .marketView__heading {
         font-size: 14px;
