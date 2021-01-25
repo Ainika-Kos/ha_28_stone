@@ -5,6 +5,7 @@ import { Search } from '../search/search';
 import { InstrumentGroup } from '../instrumentGroup/instrumentGroup';
 import './marketView.scss';
 import Loading from '../loading/loading';
+import logo from '../../assets/logo/logo.png';
 
 export const MarketView = () => {
 
@@ -59,27 +60,27 @@ export const MarketView = () => {
   const groupedInstruments = [
     {
       name: 'Bitcoin',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png',
+      image: 'btc',
       currencies: [...btc],
     },
     {
       name: 'Ethereum',
-      image: 'https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Ethereum-ETH-icon.png',
+      image: 'eth',
       currencies: [...eth],
     },
     {
       name: 'Ripple',
-      image: 'https://cdn.iconscout.com/icon/free/png-512/ripple-1-441950.png',
+      image: 'xrp',
       currencies: [...xrp],
     },
     {
       name: 'Bitcoin cash',
-      image: 'https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Bitcoin-Cash-BCH-icon.png',
+      image: 'bch',
       currencies: [...bch],
     },
     {
       name: 'Litecoin',
-      image: 'https://cryptologos.cc/logos/litecoin-ltc-logo.png',
+      image: 'ltc',
       currencies: [...ltc],
     },
   ];
@@ -91,7 +92,7 @@ export const MarketView = () => {
         <div className="col-xs-12">
           <div className="marketView__header">
             <div className="marketView__image-wrapper">
-              <img className="marketView__logo" src="https://blockchain-roadmaps.com/roadmaps/eth.png" alt="" />
+              <img className="marketView__logo" src={logo} alt="" />
             </div>
             <p className="marketView__heading">Welcome to the Market view</p>
           </div>

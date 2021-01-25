@@ -1,3 +1,4 @@
+/* eslint-disable prefer-template */
 import React, { FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { InstrumentType } from '../../data/types';
@@ -21,7 +22,7 @@ export const InstrumentGroup: FC<InstrumentGroupType> =
       return (
         <div className="instrumentGroup">
           <div className="instrumentGroup__title">
-            <img src={image} className="instrumentGroup__image" alt={currency} />
+            <img src={process.env.PUBLIC_URL + `/logo/${image}.png`} className="instrumentGroup__image" alt={currency} />
             <p className="instrumentGroup__title__text">{currency}</p>
           </div>
           {instrumentArray.map(({
