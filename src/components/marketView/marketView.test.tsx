@@ -186,13 +186,14 @@ describe('Rendering 5 cards with props', () => {
 
   expect(wrapper.find('InstrumentCard')).toHaveLength(5);
   expect(wrapper.contains(<InstrumentCard currencyPair="ETH | CHF" bidPrice={225.57} bidAmount={10} offerPrice={235.42} offerAmount={30} />)).toBe(true);
-
+  expect(wrapper.contains(<InstrumentCard currencyPair="XRP | USD" bidPrice={0.18624} bidAmount={35} offerPrice={0.19045} offerAmount={50} />)).toBe(true);
+  
   const searchWrapper = shallow(<MarketView />);
   const input = searchWrapper.find('Search');
 
   const newValue = 'xrp';
   input.simulate('change', { target: { value: newValue } });
-    
+
   expect(wrapper.find('InstrumentCard')).toHaveLength(1);
   expect(wrapper.contains(<InstrumentCard currencyPair="ETH | CHF" bidPrice={225.57} bidAmount={10} offerPrice={235.42} offerAmount={30} />)).toBe(false);
   expect(wrapper.contains(<InstrumentCard currencyPair="XRP | USD" bidPrice={0.18624} bidAmount={35} offerPrice={0.19045} offerAmount={50} />)).toBe(true);
