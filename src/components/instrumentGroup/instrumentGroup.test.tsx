@@ -47,26 +47,31 @@ describe('Passing props to InstrumentCard', () => {
       offerAmount={currencies[0].offerAmount}
     />
   );
-      
-  it('accepts currency name prop', () => {
-    expect(wrapper.contains(<p>ETH | CHF</p>)).toBeTruthy();
+     
+  it('accepts currency pair prop', () => {
+    expect(wrapper.contains(<p>{currencies[0].currencyPair}</p>)).toBeTruthy();
   });
        
-  it('accepts currency image prop', () => {
+  it('accepts currency bid amount prop', () => {
     expect(wrapper.contains(<span className="instrumentCard__amount">{currencies[0].bidAmount}</span>)).toBeTruthy();
   });
       
-  it('accepts currency image prop', () => {
+  it('accepts currency bid price prop', () => {
     expect(wrapper.contains(<span className="instrumentCard__price bid">{currencies[0].bidPrice}</span>)).toBeTruthy();
   });
     
-  it('accepts currency image prop', () => {
+  it('accepts currency offer price prop', () => {
     expect(wrapper.contains(<span className="instrumentCard__price offer">{currencies[0].offerPrice}</span>)).toBeTruthy();
   });
     
-  it('accepts currency image prop', () => {
+  it('accepts currency offer amount prop', () => {
     expect(wrapper.contains(<span className="instrumentCard__amount">{currencies[0].offerAmount}</span>)).toBeTruthy();
   });
 });
+
+
+
+
+
 
   

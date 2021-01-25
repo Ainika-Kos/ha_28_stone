@@ -5,6 +5,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import { MarketView } from './marketView';
 import { InstrumentGroup } from '../instrumentGroup/instrumentGroup';
 import { InstrumentCard } from '../instrumentCard/InstrumentCard';
+import { Search } from '../search/search';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -26,7 +27,6 @@ describe('Rendering MarketView components without crashing', () => {
 describe('Rendering MarketView content without chrashing', () => {
   it('renders heading', () => {
     const wrapper = shallow(<MarketView />);
-    const logo = '/src/assets/logo/logo.png';
       
     const header = (
       <p className="marketView__heading">Welcome to the Market view</p>
@@ -55,7 +55,7 @@ describe('Passing props to InstrumentGroup', () => {
       image={image}
     />
   );
-  
+
   it('accepts currency name prop', () => {
     expect(wrapper.contains(<p className="instrumentGroup__title__text">Bitcoin</p>)).toBeTruthy();
   });
@@ -69,87 +69,71 @@ describe('Passing props to InstrumentGroup', () => {
   });
 });
 
-describe('Rendering currencies array in InstrumentGroup without crashing', () => {
-  
+describe('Rendering 5 cards with props', () => {
+
   const instruments = [
     {
-      name: 'Bitcoin',
-      image: 'btc',
-      currencies: [{
-        'currencyPair': 'BTC | USD',
-        'bidPrice': 9259.61,
-        'bidAmount': 28,
-        'offerPrice': 9285.75,
-        'offerAmount': 70
-      }, ],
+      'currencyPair': 'ETH | CHF',
+      'bidPrice': 225.57,
+      'bidAmount': 10,
+      'offerPrice': 235.42,
+      'offerAmount': 30
     },
     {
-      name: 'Ethereum',
-      image: 'eth',
-      currencies: [{
-        'currencyPair': 'ETH | USD',
-        'bidPrice': 239.04,
-        'bidAmount': 90,
-        'offerPrice': 285.75,
-        'offerAmount': 40
-      },
-      
-      ],
+      'currencyPair': 'ETH | USD',
+      'bidPrice': 239.04,
+      'bidAmount': 90,
+      'offerPrice': 285.75,
+      'offerAmount': 40
     },
     {
-      name: 'Ripple',
-      image: 'xrp',
-      currencies: [
-        {
-          'currencyPair': 'XRP | USD',
-          'bidPrice': 0.18624,
-          'bidAmount': 35,
-          'offerPrice': 0.19045,
-          'offerAmount': 50
-        },
-        
-      ],
+      'currencyPair': 'XRP | USD',
+      'bidPrice': 0.18624,
+      'bidAmount': 35,
+      'offerPrice': 0.19045,
+      'offerAmount': 50
     },
     {
-      name: 'Bitcoin cash',
-      image: 'bch',
-      currencies: [
-        {
-          'currencyPair': 'BCH | USD',
-          'bidPrice': 9259.61,
-          'bidAmount': 28,
-          'offerPrice': 9285.75,
-          'offerAmount': 70
-        },
-        
-      ],
+      'currencyPair': 'BCH | USD',
+      'bidPrice': 9259.61,
+      'bidAmount': 28,
+      'offerPrice': 9285.75,
+      'offerAmount': 70
     },
     {
-      name: 'Litecoin',
-      image: 'ltc',
-      currencies: [{
-        'currencyPair': 'LTC | USD',
-        'bidPrice': 57.16,
-        'bidAmount': 20,
-        'offerPrice': 59.29,
-        'offerAmount': 10
-      }, ],
+      'currencyPair': 'LTC | USD',
+      'bidPrice': 57.16,
+      'bidAmount': 20,
+      'offerPrice': 59.29,
+      'offerAmount': 10
     },
   ];
 
-  instruments.map(({ name, image, currencies }) => {
-    const wrapper = shallow(
-      <InstrumentGroup
-        instrumentArray={currencies}
-        currency={name}
-        image={image}
-      />
-    );
-    console.log(wrapper.debug());
-    expect(wrapper.find('InstrumentCard')).toHaveLength(5);
-  });
-  
+  const wrapper = shallow(
+    <InstrumentGroup
+      instrumentArray={instruments}
+      currency="name"
+      image="image"
+    />
+  );
+  expect(wrapper.find('InstrumentCard')).toHaveLength(5);
+
 });
+
+// describe('Changes search word', () => {
+//   it('changes search word on change', () => {
+//     const newValue = 'testing component';
+//     const wrapper = shallow(<MarketView />);
+//     const input = wrapper.find('Search');
+//     console.log(input.debug());
+//     input.simulate('change', { target: { value: newValue } });
+//     expect(input.props().value).toEqual(newValue);
+//   });
+// });
+
+
+
+
 
 
 
