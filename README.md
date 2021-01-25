@@ -33,6 +33,8 @@
 4. [sass](https://github.com/sass/node-sass) - for using variables and nested rools in styles
 5. [enzyme](https://enzymejs.github.io/enzyme/) - for testing this project
 
+---
+
 ## Requirements
 
 ### Market View (Front End)
@@ -56,6 +58,8 @@ to set up, run and test your application.
 <ol>
 <li>Market view wireframe:</li>
 <img src="./src/assets/images/wireframe.png" alt="wireframe"/>
+
+
 
 <li>The client application should be a single page application with 2 components:</li>
 <ul>
