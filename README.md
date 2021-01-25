@@ -8,7 +8,7 @@
 ### You can run and test this project:
 1. clone repository
 ### `git clone https://github.com/Ainika-Kos/ha_28_stone.git`
-2. open terminal and type command
+2. when project is cloned and opened in the editor, open new terminal and type command
 ### `npm install`
 3. when node-modules folder is ready, type command
 ### `npm run start`
@@ -19,10 +19,12 @@
 
 ---
 
-## Main informmation about this project:
+### Main informmation about this project:
 1. React TypeScript single page application 
 2. Created according to the technical and business requirements
 3. Responsive and user-friendly design
+
+---
 
 ### Libraries used in this project:
 1. [axios](https://github.com/axios/axios) - for fetching data
