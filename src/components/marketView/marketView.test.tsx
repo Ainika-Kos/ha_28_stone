@@ -68,7 +68,7 @@ describe('Passing props to InstrumentGroup', () => {
   });
 });
 
-describe('Rendering 5 cards with props', () => {
+describe('Rendering 5 instrument cards', () => {
 
   const instruments = [
     {
@@ -134,7 +134,7 @@ describe('Search component works correctly', () => {
 
 });
 
-describe('Rendering 5 cards with props', () => {
+describe('Rendering cards by searched value', () => {
 
   const instruments = [
     {
