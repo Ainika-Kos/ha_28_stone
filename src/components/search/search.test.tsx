@@ -16,7 +16,7 @@ describe('Rendering Search content without chrashing', () => {
   it('renders search text', () => {
     const wrapper = shallow(<Search />);
         
-    const text = (<h3>Search:</h3>);
+    const text = (<h3 className="search__text">Search:</h3>);
         
     expect(wrapper.contains(text)).toBe(true);
   });
