@@ -132,20 +132,6 @@ describe('Search component works correctly', () => {
 
   });
 
-  // it('Search input changes searchWord', () => {
-
-  //   const wrapper = shallow(<MarketView />);
-  //   const input = wrapper.find('Search');
-
-  //   const newValue = 'xrp';
-    
-  //   input.simulate('change', { target: { value: newValue } });
-    
-  //   console.log(wrapper.debug());
-
-  //   expect(wrapper.find('BTC | USD')).toHaveLength(1);
-
-  // });
 });
 
 describe('Rendering 5 cards with props', () => {
@@ -205,12 +191,12 @@ describe('Rendering 5 cards with props', () => {
   const input = searchWrapper.find('Search');
 
   const newValue = 'xrp';
-    
   input.simulate('change', { target: { value: newValue } });
     
   expect(wrapper.find('InstrumentCard')).toHaveLength(1);
   expect(wrapper.contains(<InstrumentCard currencyPair="ETH | CHF" bidPrice={225.57} bidAmount={10} offerPrice={235.42} offerAmount={30} />)).toBe(false);
   expect(wrapper.contains(<InstrumentCard currencyPair="XRP | USD" bidPrice={0.18624} bidAmount={35} offerPrice={0.19045} offerAmount={50} />)).toBe(true);
+  
   console.log(wrapper.debug());
 
 });
