@@ -1,4 +1,5 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { InstrumentGroup } from './instrumentGroup';
@@ -16,6 +17,13 @@ const currencies = [{
 ];
 const currency = 'Ethereum';
 const image = 'Image source 2';
+
+it('renders correctly', () => {
+  const tree = renderer
+    .create(<InstrumentCard />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
     
 
 describe('Rendering InstrumentGroup component without crashing', () => {

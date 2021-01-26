@@ -41,7 +41,7 @@ export const MarketView = () => {
   // instruments grouped in different arrays by left currency 
   const groupedInstruments = getComplexData(filteredInstruments);
 
-    
+  
   return (
     <div className="container">
       <div className="row center-xs">

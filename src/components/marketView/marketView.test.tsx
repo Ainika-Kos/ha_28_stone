@@ -1,5 +1,5 @@
 import React from 'react';
-// import renderer from 'react-test-renderer';
+import renderer from 'react-test-renderer';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { MarketView } from './marketView';
@@ -7,6 +7,13 @@ import { InstrumentGroup } from '../instrumentGroup/instrumentGroup';
 import { InstrumentCard } from '../instrumentCard/InstrumentCard';
 
 Enzyme.configure({ adapter: new Adapter() });
+
+it('renders correctly', () => {
+  const tree = renderer
+    .create(<MarketView />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
 describe('Rendering MarketView components without crashing', () => {
   it('renders <MarketView /> component', () => {

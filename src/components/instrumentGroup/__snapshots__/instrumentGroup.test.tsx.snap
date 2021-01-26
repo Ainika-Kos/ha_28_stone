@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="instrumentCard"
+>
+  <div
+    className="instrumentCard__currency"
+  >
+    <p />
+  </div>
+  <div
+    className="instrumentCard__deal-info"
+  >
+    <div
+      className="instrumentCard__side"
+    >
+      <span
+        className="instrumentCard__amount"
+      />
+      <span
+        className="instrumentCard__price bid"
+      />
+    </div>
+    <div
+      className="instrumentCard__side"
+    >
+      <span
+        className="instrumentCard__price offer"
+      />
+      <span
+        className="instrumentCard__amount"
+      />
+    </div>
+  </div>
+</div>
+`;
