@@ -55,12 +55,12 @@
 
 @media only screen and (max-width: 600px) { 
 
-    .marketView__heading {
-        font-size: 14px;
-    }
-
     .marketView__groups {
         justify-content: center;
+    }
+
+    .marketView__heading {
+        font-size: 14px;
     }
 }
 

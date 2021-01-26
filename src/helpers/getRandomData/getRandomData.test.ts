@@ -1,3 +1,4 @@
+import { InstrumentType } from '../../types/types';
 import { getRandomData } from './getRandomData';
 
 const instruments: InstrumentType[] = [
