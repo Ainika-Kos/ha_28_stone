@@ -5,3 +5,9 @@ export type InstrumentType = {
   offerPrice: number;
   offerAmount: number; 
 };
+
+export type GroupedInstrumentType = {
+  name: string;
+  image: string;
+  currencies: InstrumentType[];
+};

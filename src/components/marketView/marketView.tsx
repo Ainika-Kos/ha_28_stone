@@ -3,9 +3,12 @@ import axios from 'axios';
 import { InstrumentType } from '../../data/types';
 import { Search } from '../search/search';
 import { InstrumentGroup } from '../instrumentGroup/instrumentGroup';
-import './marketView.scss';
+import { getRandomData } from '../../helpers/getRandomData';
+import { getFilteredInstruments } from '../../helpers/getFilteredInstruments';
+import { getComplexData } from '../../helpers/getComplexInstruments';
 import Loading from '../loading/loading';
 import logo from '../../assets/images/logo.png';
+import './marketView.scss';
 
 export const MarketView = () => {
 
@@ -13,6 +16,7 @@ export const MarketView = () => {
   const [searchWord, setSearchWord] = useState('');
   const [loading, setLoading] = useState(false);
    
+  // get data on mounting and each second
   useEffect(() => {
     setLoading(true);
     const interval = setInterval(() => getData(), 1000);
@@ -20,81 +24,22 @@ export const MarketView = () => {
       clearInterval(interval);
     };
   }, []);
-    
-  const getData = () => {
 
+  // getting data from instruments.json => update with a different random value     
+  const getData = () => {
     axios.get('instruments.json')
       .then((response) => {
-
         const result: InstrumentType[] = response.data;
-
-        const newResult = result.map((instrument) => {
-          const newInstrument = { ...instrument };
-
-          newInstrument.bidAmount += Math.floor(Math.random()*5);
-          newInstrument.offerAmount += Math.floor(Math.random() * 5);
-          newInstrument.bidPrice += Math.round(Math.random() * 10);
-          newInstrument.offerPrice += Math.round(Math.random() * 1);
-
-          return newInstrument;
-
-        });
-
-        setInstruments(newResult);
+        setInstruments(getRandomData(result));
         setLoading(false);
       });
   };
 
-  const newInstruments = [...instruments];
+  // instruments filtered by searchWord
+  const filteredInstruments = getFilteredInstruments(instruments, searchWord);
 
-  const convertInput = (input: string): string => {
-    return input
-      .replace('bitcoin cash', 'bch')
-      .replace('bitcoin', 'btc')
-      .replace('ethereum', 'eth')
-      .replace('ripple', 'xrp')
-      .replace('litecoin', 'ltc');
-  };
-
-  const filteredInstruments = newInstruments.filter(({ currencyPair }) => {
-    return currencyPair.toLowerCase()
-      .includes(convertInput(searchWord.toLowerCase()));
-  });
-
-  const btc = filteredInstruments.filter(({ currencyPair }) => currencyPair.includes('BTC |'));
-  const eth = filteredInstruments.filter(({ currencyPair }) => currencyPair.includes('ETH |'));
-  const xrp = filteredInstruments.filter(({ currencyPair }) => currencyPair.includes('XRP |'));
-  const bch = filteredInstruments.filter(({ currencyPair }) => currencyPair.includes('BCH |'));
-  const ltc = filteredInstruments.filter(({ currencyPair }) => currencyPair.includes('LTC |'));
-
-  const groupedInstruments = [
-    {
-      name: 'Bitcoin',
-      image: 'btc',
-      currencies: [...btc],
-    },
-    {
-      name: 'Ethereum',
-      image: 'eth',
-      currencies: [...eth],
-    },
-    {
-      name: 'Ripple',
-      image: 'xrp',
-      currencies: [...xrp],
-    },
-    {
-      name: 'Bitcoin cash',
-      image: 'bch',
-      currencies: [...bch],
-    },
-    {
-      name: 'Litecoin',
-      image: 'ltc',
-      currencies: [...ltc],
-    },
-  ];
-
+  // instruments grouped in different arrays by left currency 
+  const groupedInstruments = getComplexData(filteredInstruments);
     
   return (
     <div className="container">

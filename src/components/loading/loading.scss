@@ -11,7 +11,7 @@
         height: 64px;
         border-radius: 50%;
         border: 6px solid $blueTextColor;
-        border-color:#00bfff transparent $blueTextColor transparent;
+        border-color:$blueTextColor transparent $blueTextColor transparent;
         animation: loading 1.2s linear infinite;
     }
 }
