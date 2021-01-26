@@ -8,23 +8,18 @@ type SearchType = {
   onChange: (e: string) => void;
 };
 
-export const Search: FC<SearchType> = ({
-  value,
-  placeholder,
-  type,
-  onChange
-}) => {
-  return (
-    <div className="search">
-      <h3 className="search__text">Search:</h3>
-      <input
-        className="search__input"
-        value={value}
-        placeholder={placeholder}
-        type={type}
-        onChange={(e) => onChange(e.target.value)}
-        data-testid="input"
-      />
-    </div>
-  );
-};
+export const Search: FC<SearchType> =
+  ({ value, placeholder, type, onChange }) => {
+    return (
+      <div className="search">
+        <h3 className="search__text">Search:</h3>
+        <input
+          className="search__input"
+          value={value}
+          placeholder={placeholder}
+          type={type}
+          onChange={(e) => onChange(e.target.value)}
+        />
+      </div>
+    );
+  };

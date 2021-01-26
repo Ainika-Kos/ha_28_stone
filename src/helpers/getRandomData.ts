@@ -1,4 +1,4 @@
-import { InstrumentType } from '../data/types';
+import { InstrumentType } from '../types/types';
 
 export const getRandomData = (result: InstrumentType[]): InstrumentType[] => {
   const newResult = result.map((instrument) => {
@@ -7,7 +7,7 @@ export const getRandomData = (result: InstrumentType[]): InstrumentType[] => {
     newInstrument.bidAmount += Math.floor(Math.random()*5);
     newInstrument.offerAmount += Math.floor(Math.random() * 5);
     newInstrument.bidPrice += Math.round(Math.random() * 10);
-    newInstrument.offerPrice += Math.round(Math.random() * 1);
+    newInstrument.offerPrice += Math.round(Math.random());
 
     return newInstrument;
 

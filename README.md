@@ -34,9 +34,8 @@
 ### Libraries used in this project:
 1. [axios](https://github.com/axios/axios) - for fetching data
 2. [flexboxgrid](http://flexboxgrid.com/) - for creating responsive design 
-3. [uuid](https://github.com/uuidjs/uuid#readme) - for creating an unique key
-4. [sass](https://github.com/sass/node-sass) - for using variables and nested rools in styles
-5. [enzyme](https://enzymejs.github.io/enzyme/) - for testing this project
+3. [sass](https://github.com/sass/node-sass) - for using variables and nested rools in styles
+4. [enzyme](https://enzymejs.github.io/enzyme/) - for testing this project
 
 ---
 
