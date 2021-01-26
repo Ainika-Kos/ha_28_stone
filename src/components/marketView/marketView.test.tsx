@@ -1,11 +1,10 @@
 /* eslint-disable prefer-template */
 import React from 'react';
-import Enzyme, { mount, shallow } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { MarketView } from './marketView';
 import { InstrumentGroup } from '../instrumentGroup/instrumentGroup';
 import { InstrumentCard } from '../instrumentCard/InstrumentCard';
-import { Search } from '../search/search';
 
 Enzyme.configure({ adapter: new Adapter() });
 
