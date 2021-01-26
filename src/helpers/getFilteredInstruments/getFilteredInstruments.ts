@@ -1,4 +1,4 @@
-import { InstrumentType } from '../types/types';
+import { InstrumentType } from '../../types/types';
 
 export const getFilteredInstruments =
     (instruments: InstrumentType[], searchWord: string): InstrumentType[] => {

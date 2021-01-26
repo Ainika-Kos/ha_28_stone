@@ -1,4 +1,4 @@
-import { InstrumentType, GroupedInstrumentType } from '../types/types';
+import { InstrumentType, GroupedInstrumentType } from '../../types/types';
 
 export const getComplexData =
     (instruments: InstrumentType[]): GroupedInstrumentType[] => {
