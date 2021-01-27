@@ -19,7 +19,7 @@
 
 ---
 
-### Main informmation about this project:
+### Main information about this project:
 1. React TypeScript single page application 
 2. Created according to the technical and business requirements
 3. Responsive and user-friendly design
